@@ -1,10 +1,10 @@
 
-http://www.pythonchallenge.com/pc/def/ocr.html
-<!--
-find rare characters in the mess below:
--->
 
-<!--
+# http://www.pythonchallenge.com/pc/def/ocr.html
+
+# find rare characters in the mess below:
+
+stringMess = """
 %%$@_$^__#)^)&!_+]!*@&^}@[@%]()%+$&[(_@%+%$*^@$^!+]!&_#)_*}{}}!}_]$[%}@[{_@#_^{*
 @##&{#&{&)*%(]{{([*}@[@&]+!!*{)!}{%+{))])[!^})+)$]#{*+^((@^@}$[**$&^{$!@#$%)!@(&
 +^!{%_$&@^!}$_${)$_#)!({@!)(^}!*^&!$%_&&}&_#&@{)]{+)%*{&*%*&@%$+]!*__(#!*){%&@++
@@ -1225,4 +1225,34 @@ $#_}*!(+([_&%{^&[([%]}*^{{([@+@]@*&@_!]_+([(#&!]]#$$#]@#{_]][_{@]{*))$({%}_![@$]
 %&]!{{%*_!*}&)}$**_{*!#%[[#]!](^^$![#[[*}%(_#^^!%))!_^@)@**@}}(%%{#*%@(((]^%^![&
 }!)$]&($)@](+(#{$)_%^%_^^#][{*[)%}+[##(##^{$}^]#&(&*{)%)&][&{]&#]}[[^^&[!#}${@_(
 #@}&$[[%]_&$+)$!%{(}$^$}*
--->
+"""
+
+print(len(stringMess))
+
+
+string1 = stringMess.replace("!","")
+string1 = string1.replace("@","")
+string1 = string1.replace("#","")
+string1 = string1.replace("$","")
+string1 = string1.replace("%","")
+string1 = string1.replace("^","")
+string1 = string1.replace("&","")
+string1 = string1.replace("*","")
+string1 = string1.replace("(","")
+string1 = string1.replace(")","")
+string1 = string1.replace("_","")
+string1 = string1.replace("+","")
+string1 = string1.replace("[","")
+string1 = string1.replace("]","")
+string1 = string1.replace("{","")
+string1 = string1.replace("}","")
+string1 = string1.replace(" ","")
+
+for i in string1:
+    string1 = "".join(string1.splitlines())
+
+print(len(string1))
+print(string1)
+
+## Answer is "equality"
+
