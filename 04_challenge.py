@@ -3,7 +3,6 @@
 # One small letter, surrounded by EXACTLY three big bodyguards on each of its sides.
 
 guts = """
-<!--
 kAewtloYgcFQaJNhHVGxXDiQmzjfcpYbzxlWrVcqsmUbCunkfxZWDZjUZMiGqhRRiUvGmYmvnJIHEmbT
 MUKLECKdCthezSYBpIElRnZugFAxDRtQPpyeCBgBfaRVvvguRXLvkAdLOeCKxsDUvBBCwdpMMWmuELeG
 ENihrpCLhujoBqPRDPvfzcwadMMMbkmkzCCzoTPfbRlzBqMblmxTxNniNoCufprWXxgHZpldkoLCrHJq
@@ -1256,6 +1255,35 @@ KfErkDaWMFZZeuqDmXKJEGHyToPUhPphfVhgUZgbIuRAtWnroImpJKqqmEZqeNQCKzhjIkKQHURWLXFw
 PBuijeoTSpsVLaOGuLVjMZXkBvVXwUuHfBihziiavGSYofPNeKsTXruMUumRRPQJzvSzJkKbtSipiqBd
 """
 
+for i in guts:
+    guts = "".join(guts.splitlines())
 # Thoughts: 
 # if letter is lowercase, then is the left three and right three all uppercase?  
 #   if so, store/print string section.
+
+a = ord('a') # a = 97
+z = ord('z') # z = 122
+A = ord('A') # A = 65
+Z = ord('Z') # Z = 90
+
+print(a)
+print(z)
+print(A)
+print(Z)
+
+
+gutsTest = 'ABCDEFgHIJKLmNOPQRRRsRRR'
+x = 0
+for i in guts:
+    if i.islower() == True:
+        stringQ = guts[x-3:x+4]
+        stringFront = stringQ[0:3]
+        stringBack = stringQ[4:]
+        stringEnds = stringFront + stringBack
+        if stringEnds.isupper() == True:
+            print(stringQ)
+            #if stringBack[0] == stringBack[1]:
+                #if stringFront[0] == stringFront[1]:
+                    #print(stringQ)
+    x+=1
+print(guts)
